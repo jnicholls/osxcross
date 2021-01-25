@@ -99,7 +99,7 @@ int version(Target*, char**) {
 int sdk(Target*, char **argv) {
   const char *SDK = argv[0];
 
-  if (!strcmp(SDK, "macosx") || !strcmp(SDK, "macosx.internal"))
+  if (!strcmp(SDK, "macosx") || !strcmp(SDK, "macosx.internal") || !strncmp(SDK, "iphone", 6))
     return 0;
 
   // Ignore '/'.
